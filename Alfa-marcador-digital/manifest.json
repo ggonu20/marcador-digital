@@ -1,6 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Marcador Digital",
+    "description": "Una aplicacion para seguir el precio de productos",
     "version": "0.0",
     
     "icons": {
@@ -9,7 +10,7 @@
       "128": "icons/icon_128.png"
     },
 
-    "homepage_url": "/html/home.html",
+    "permision":["tabs"],
 
     "action": {
         "default_title": "Click me",
