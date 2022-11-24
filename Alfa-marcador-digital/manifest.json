@@ -11,8 +11,8 @@
     },
 
     "permissions": [
-        "activeTab",
-        "scripting"
+        "notifications",
+        "storage"
       ],
     
     "background": {
@@ -20,9 +20,12 @@
     },
 
     "action": {
-        "default_icon" : "icons/icon_128.png",
+        "default_icon" : "icons/icon_48.png",
         "default_title": "Click me",
-        "default_popup": "/html/popup.html"
+        "default_popup": "/html/popup.html",
+        "matches": [
+          "https://www.solotodo.cl/cells?min_network_generation_start=1123014*"
+        ]
     }
     
   }
