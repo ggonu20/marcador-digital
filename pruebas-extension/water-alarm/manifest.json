@@ -4,15 +4,16 @@
     "version": "1.0",
     "manifest_version": 3,
     "permissions": [
-      "alarms",
-      "notifications",
-      "storage"
+      "alarms",  
+      "notifications", 
+      "storage" 
     ],
+    
     "background": {
       "service_worker": "background.js"
     },
     "action": {
-      "default_title": "Drink Water Event",
+      "default_title": "Drink Water Event", 
       "default_popup": "popup.html"
     },
     "icons": {

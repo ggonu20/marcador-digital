@@ -1,24 +1,19 @@
-// Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-'use strict';
+'use strict'; //usa el modo estricto de java script, en algunos buscadores puede cambiar la forma de la que se usa el java
 
 function setAlarm(event) {
-  let minutes = parseFloat(event.target.value);
-  chrome.action.setBadgeText({text: 'ON'});
-  chrome.alarms.create({delayInMinutes: minutes});
-  chrome.storage.sync.set({minutes: minutes});
+  let minutes = parseFloat(event.target.value); //crea una variable minutes con el valor del boton seleccionado
+  chrome.action.setBadgeText({text: 'ON'}); //Pone una banderita encima del icono en la toolbar
+  chrome.alarms.create({delayInMinutes: minutes}); //Crea una alarma, delayinminutes hace que el evento on alarm se active terminada la alarma 
+  chrome.storage.sync.set({minutes: minutes}); //Crea un storage text con el valor de minutes
   window.close();
 }
 
 function clearAlarm() {
-  chrome.action.setBadgeText({text: ''});
-  chrome.alarms.clearAll();
-  window.close();
+  chrome.action.setBadgeText({text: ''}); // quita la banderita
+  chrome.alarms.clearAll(); //limpia la alarma
+  window.close(); 
 }
 
-//An Alarm delay of less than the minimum 1 minute will fire
-// in approximately 1 minute increments if released
 document.getElementById('sampleMinute').addEventListener('click', setAlarm);
 document.getElementById('min15').addEventListener('click', setAlarm);
 document.getElementById('min30').addEventListener('click', setAlarm);

@@ -1,24 +1,27 @@
-// Copyright 2017 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+//background siempre esta en ejecucion o esperando estar en ejecucion
 'use strict';
 
-chrome.alarms.onAlarm.addListener(() => {
-  chrome.action.setBadgeText({ text: '' });
-  chrome.notifications.create({
-    type: 'basic',
-    iconUrl: 'stay_hydrated.png',
-    title: 'Time to Hydrate',
-    message: 'Everyday I\'m Guzzlin\'!',
-    buttons: [
-      { title: 'Hola tonto' }
+chrome.alarms.onAlarm.addListener(() => {  //se activa cuando la alarma se activa, pero como esta el delay se activa al terminar.
+  chrome.action.setBadgeText({ text: '' });  //setea la banderita en nada
+  chrome.notifications.create({ //genera una notificacion de google chrome
+    type: 'basic', //template del notification 
+    iconUrl: 'stay_hydrated.png', //icono
+    title: 'Time to Hydrate', //titulo
+    message: 'Everyday I\'m Guzzlin\'!', //mensaje
+    buttons: [  //crea un boton
+      { title: 'Hola' }
     ],
-    priority: 0
+    priority: 0 //no se que hace, creo que es algo de js
   });
 });
 
-chrome.notifications.onButtonClicked.addListener(async () => {
+chrome.notifications.onButtonClicked.addListener(async () => { //activa el evento cuando clickeas el boton de la notificacion
   const item = await chrome.storage.sync.get(['minutes']);
   chrome.action.setBadgeText({ text: 'ON' });
   chrome.alarms.create({ delayInMinutes: item.minutes });
 });
+
+// "permissions": 
+// "alarms"            chrome.alarms. ...        
+//  "notifications"    chrome.notifications. ...        
+//  "storage"          chrome.storage. ...            
