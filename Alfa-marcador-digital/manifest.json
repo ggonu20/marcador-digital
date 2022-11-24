@@ -14,8 +14,9 @@
         "activeTab",
         "scripting"
       ],
-    "homepage_url": "/html/home.html",
+    
     "action": {
+        "default_icon" : "icons/icon_128.png",
         "default_title": "Click me",
         "default_popup": "/html/popup.html"
     }
