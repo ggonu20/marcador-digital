@@ -1,6 +1,4 @@
-
 var btn = document.getElementById('btn');
-
 btn.addEventListener("click",function(){
     chrome.notifications.create(
         {
@@ -11,4 +9,5 @@ btn.addEventListener("click",function(){
             priority: 0
         }
     )
+    close();
 });

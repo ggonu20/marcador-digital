@@ -1,11 +1,19 @@
 
+  html {
+    background-color:#000;
+    
+  }
   body {
     text-align: center;
-    background-color:rgb(198, 227, 230);
+    border: red 5px dashed;
     color:rgb(100, 48, 168);
+    min-height: 300px;
+    min-width: 400px;
+    background-color: papayawhip; 
+    margin: 0 auto;
   }
   #Image {
-    width: 100px;
+    width: 150px;
     margin: 5px;
   }
   button {
