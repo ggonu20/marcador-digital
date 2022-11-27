@@ -14,6 +14,8 @@
         "notifications",
         "storage"
       ],
+
+      "host_permissions":["http://www.localhost/*"],
     
     "background": {
       "service_worker": "js/background.js"
