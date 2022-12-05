@@ -11,3 +11,14 @@ btn.addEventListener("click",function(){
     )
     close();
 });
+
+chrome.runtime.sendMessage({
+    command: 'post', data: {
+      chrome.identity.getAuthToken({'interactive' : true},function(token)){
+        
+      }
+    }
+  }, (response) => {
+    console.log(response);
+  }
+);

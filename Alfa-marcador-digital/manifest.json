@@ -11,11 +11,15 @@
     },
 
     "permissions": [
+        "tabs",
+        "scripting",
+        "activeTab",
+        "identity",
         "notifications",
         "storage"
       ],
 
-      "host_permissions":["http://www.localhost/*"],
+    "host_permissions":["<all_urls>"],
     
     "background": {
       "service_worker": "js/background.js"
@@ -23,8 +27,17 @@
 
     "action": {
         "default_icon" : "icons/icon_48.png",
-        "default_title": "Click me",
+        "default_title": "Extension en creacion",
         "default_popup": "/html/popup.html"
-    }
+    },
     
+    "oauth2": {
+      "client_id": "932338755115-q0ggps4q48e7sa5gulnv0sta0gj3evkr.apps.googleusercontent.com",
+      "scopes": [
+        "https://www.googleapis.com/auth/userinfo.email",
+        "https://www.googleapis.com/auth/userinfo.profile"
+      ]
+    },
+    "key": "jhgnibalakcolfhckieoaphjlbbihhlb"
+
   }
