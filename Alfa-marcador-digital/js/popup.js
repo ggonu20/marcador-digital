@@ -1,6 +1,6 @@
 console.log("popup!")
-import { app } from './firebase_config'
-import {
+self.import { app } from '../background.js'
+self.import {
     getAuth,
     onAuthStateChanged,
     signInWithCredential,
