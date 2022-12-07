@@ -6,8 +6,8 @@ function get_url(){
         lastFocusedWindow: true
     }, function(tabs) {
         var tab = tabs[0];
-        console.log(tab.url);
-        //alert(tab.url);
+        //console.log(tab.url);
+        alert(tab.url);
         buscar(tab.url);
     });
 }
@@ -33,13 +33,11 @@ function notificaciones(){
 }
 
 function buscar(url){
-    console.log(url);
+    //console.log(url);
     var arr = fetch(url)
-    .then(response =>response.text());
-    //.then(response =>console.log(response));
+    .then(response =>response.text())
+    .then(response =>console.log(response));
     console.log(arr);
-    var json = JSON.stringify(arr);
-    console.log(json);
 
 }
 
