@@ -27,12 +27,12 @@
     },
     "options_page": "options.html",
     "oauth2": {
-        "client_id": "<Your Client Id>",
+        "client_id": "<fill_me>", 
         "scopes": [
           "https://www.googleapis.com/auth/userinfo.email",
           "https://www.googleapis.com/auth/userinfo.profile"
         ]
       },
-      "key": "-----BEGIN PUBLIC KEY-----<Your Chrome Extension Public Key>-----END PUBLIC KEY-----"
+      "key": "-----BEGIN PUBLIC KEY-----\n<Your Chrome Extension Public Key\n-----END PUBLIC KEY-----"
 
 }
